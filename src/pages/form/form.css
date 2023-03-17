@@ -1,0 +1,41 @@
+.form {
+    height: inherit;
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 7%;
+}
+.form h1 {
+    color: #fff;
+}
+.form input {
+    height: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.form button {
+    background: linear-gradient(95deg, rgb(255, 87, 34) 20%, rgb(255, 87, 34) 80%);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: #fff;
+    transition: 0.6s;
+    width: 100%;
+}
+.form button:hover {
+    transition: 0.6s;
+    color: rgb(255, 87, 34);
+    background: #fff;
+}
+.form p {
+    cursor: pointer;
+    margin-top: 1em;
+    color: rgb(255, 87, 34);
+    text-decoration: none;
+}
+.form p:hover {
+    color: #fff;
+}

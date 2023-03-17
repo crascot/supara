@@ -1,0 +1,17 @@
+.main {
+    margin: 0 auto;
+    margin-top: 8px;
+    max-width: 564px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-block {
+    width: 564px;
+    height: 304px;
+    margin-bottom: -20px;
+}
+
+.line {
+    transform: translateY(9px);
+}
