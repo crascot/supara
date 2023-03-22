@@ -1,0 +1,10 @@
+.menu {
+    max-width: 1134px;
+    width: 100%;
+    margin: 0 auto;
+    color: #e57131;
+}
+
+.menu h1, h2 {
+    text-align: center;
+}

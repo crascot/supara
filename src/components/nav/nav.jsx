@@ -16,19 +16,11 @@ const Nav = ({ current }) => {
         },
         {
             type: 'guest_zal',
-            text: 'Зал',
-        },
-        {
-            type: 'philial',
-            text: 'Филиалы',
+            text: 'Места',
         },
         {
             type: 'form',
             text: 'Войти',
-        },
-        {
-            type: 'reserve',
-            text: 'Забронировать',
         },
     ]
 
