@@ -6,17 +6,19 @@ import line from '../../assets/main-images/line1.png';
 import './main.css';
 
 const Main = () => {
+    const selectPhilial = (e) => localStorage.setItem('philial', e)
+
     return (
         <div className='main'>
-            <a href='/supara/main' className="main-block">
+            <a onClick={() => selectPhilial(1)} href='/supara/main' className="main-block">
                 <img src={chun} alt='' />
             </a>
             <img className='line' src={line} alt='' />
-            <a href='/supara/main' className="main-block">
+            <a onClick={() => selectPhilial(2)} href='/supara/main' className="main-block">
                 <img src={ethno} alt='' />
             </a>
             <img className='line' src={line} alt='' />
-            <a href='/supara/main' className="main-block">
+            <a onClick={() => selectPhilial(3)} href='/supara/main' className="main-block">
                 <img src={catering} alt='' />
             </a>
         </div>

@@ -1,0 +1,10 @@
+.main-cafe {
+    max-width: 1134px;
+    width: 100%;
+    margin: 0 auto;
+    color: #e57131;
+}
+
+.main-cafe .name {
+    text-align: center;
+}

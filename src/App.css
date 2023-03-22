@@ -1,0 +1,17 @@
+.container {
+    max-width: 1136px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.block {
+    background-color: #4D120A;
+    max-width: max-content;
+    padding: 10px;
+    border-radius: 10px;
+    color: #e57131;
+    margin: 20px;
+}

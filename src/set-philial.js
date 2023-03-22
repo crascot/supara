@@ -1,0 +1,1 @@
+export const setPhilial = JSON.parse(localStorage.getItem('philial'))
