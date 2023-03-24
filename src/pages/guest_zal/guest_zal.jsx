@@ -1,26 +1,37 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import Nav from '../../components/nav/nav';
+import { guest_zalPoint, HOST } from '../../end-points';
 import { setPhilial } from '../../set-philial';
 import './guest_zal.css';
 
-const GuestZal = ({ guest_zalArr, reserveArr }) => {
-    const currentGuest_zal = guest_zalArr.filter(el => el.philial === setPhilial)
+const GuestZal = () => {
+    const [guests, setGuests] = useState([])
+    let currentGuests = [];
 
-    const arr3 = currentGuest_zal.map((y) => Object.assign(y, reserveArr.find((x) => x.guest_zal === y.id)));
+    useEffect(() => {
+        axios.get(`${HOST}${guest_zalPoint}`)
+        .then(res => setGuests(res.data))
+      }, [])
 
-    const guests = arr3.map((el, i) => (
-        <div key={i} className='block'>
-            <h1>Название: {el.name}</h1>
-            <p>Всего мест: {el.seating}</p>
-            <p>Забронированно мест: {el.seat_number}</p>
-        </div>
-    ))
+      guests? currentGuests = guests.filter(el => el.philial === setPhilial) : currentGuests = null
 
     return (
         <div>
             <Nav current='guest_zal' />
             <div className='container'>
-            {guests}
+                {
+                    currentGuests ?
+                    currentGuests.map((el, i) => (
+                        <div key={i} className='block'>
+                            <h1>{el.name}</h1>
+                            <h2>Всего мест: {el.seating}</h2>
+                            <h3>Забронированно: {el.resurves.map(num => num.seat_number).reduce((a, b) => a+b)}</h3>
+                        </div>
+                    ))
+                    :
+                    ''
+                }
             </div>
         </div>
     );

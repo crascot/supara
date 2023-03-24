@@ -9,18 +9,20 @@ const Main = () => {
     const selectPhilial = (e) => localStorage.setItem('philial', e)
 
     return (
-        <div className='main'>
-            <a onClick={() => selectPhilial(1)} href='/supara/main' className="main-block">
-                <img src={chun} alt='' />
-            </a>
-            <img className='line' src={line} alt='' />
-            <a onClick={() => selectPhilial(2)} href='/supara/main' className="main-block">
-                <img src={ethno} alt='' />
-            </a>
-            <img className='line' src={line} alt='' />
-            <a onClick={() => selectPhilial(3)} href='/supara/main' className="main-block">
-                <img src={catering} alt='' />
-            </a>
+        <div className='main-page'>
+            <div className='main'>
+                <a onClick={() => selectPhilial(1)} href='/supara/main' className="main-block">
+                    <img src={chun} alt='' />
+                </a>
+                <img className='line' src={line} alt='' />
+                <a onClick={() => selectPhilial(2)} href='/supara/main' className="main-block">
+                    <img src={ethno} alt='' />
+                </a>
+                <img className='line' src={line} alt='' />
+                <a onClick={() => selectPhilial(3)} href='/supara/main' className="main-block">
+                    <img src={catering} alt='' />
+                </a>
+            </div>
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useState } from 'react';
-import { HOST, login, registration } from '../../end-points';
+import React, { useEffect, useState } from 'react';
+import { HOST, loginPoint, registrationPoint } from '../../end-points';
 import Nav from '../../components/nav/nav';
 import './form.css';
 
@@ -10,12 +10,21 @@ const Form = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    useEffect(() => {
+        setEmail('')
+        setPassword('')
+    }, [isLogin])
+
     const getIn = (endPoint) => {
-        axios.post(`${HOST}/${endPoint}`, {
+        axios.post(`${HOST}${endPoint}`, {
             email: email,
             password: password
         })
-            .then(res => console.log(res))
+            .then(res => {
+                console.log(res)
+                setEmail('')
+                setPassword('')
+            })
             .catch(err => console.log(err))
     }
 
@@ -29,7 +38,6 @@ const Form = () => {
                         <input
                             type='email'
                             placeholder='Введите вашу почту'
-                            maxLength='254'
                             minLength='1'
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
@@ -41,7 +49,7 @@ const Form = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                        <button onClick={() => getIn(login)}>Войти</button>
+                        <button onClick={() => getIn(loginPoint)}>Войти</button>
                         <p onClick={() => setIsLogin('register')}>Зарегистрироваться</p>
                     </div>
                     :
@@ -62,7 +70,7 @@ const Form = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                        <button onClick={() => getIn(registration)}>Зарегистрироваться</button>
+                        <button onClick={() => getIn(registrationPoint)}>Зарегистрироваться</button>
                         <p onClick={() => setIsLogin('login')}>Войти</p>
                     </div>
             }
