@@ -1,17 +1,35 @@
+.bg {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../../assets//main-images/bg-mans.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 .main {
     margin: 0 auto;
-    margin-top: 8px;
-    max-width: 564px;
+    margin-top: 1vh;
+    max-width: 30vw;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 .main-block {
-    width: 564px;
-    height: 304px;
-    margin-bottom: -20px;
+    z-index: 1;
+    height: 33vh;
+    margin-bottom: -2vh;
+}
+.main-block img {
+    max-height: inherit;
+    height: 100%;
 }
 
 .line {
-    transform: translateY(9px);
+    height: 2.19vh;
+    z-index: 2;
+    transform: translateY(1vh);
 }
