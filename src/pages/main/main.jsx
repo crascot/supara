@@ -11,6 +11,7 @@ const Main = () => {
     return (
         <div className='main-page'>
             <div className='main'>
+                <span className='bg' />
                 <a onClick={() => selectPhilial(1)} href='/supara/main' className="main-block">
                     <img src={chun} alt='' />
                 </a>
