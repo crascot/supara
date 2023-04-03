@@ -8,3 +8,16 @@
 .menu h1, h2 {
     text-align: center;
 }
+
+.menu .block {
+    width: 250px;
+}
+.menu .name, .price {
+    margin: 0;
+}
+.menu .name {
+    color: #fff;
+}
+.menu .block img {
+    width: inherit;
+}
