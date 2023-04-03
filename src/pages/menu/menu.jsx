@@ -23,20 +23,21 @@ const Menu = () => {
             <Nav current='menu' />
             <div className='menu'>
                 <div>
-                    <h1>Название: {currentMenu? currentMenu.name : ''}</h1>
-                    <h2>Описание: {currentMenu? currentMenu.description : ''}</h2>
+                    <h1>{currentMenu ? currentMenu.name : ''}</h1>
+                    <h2>{currentMenu ? currentMenu.description : ''}</h2>
                 </div>
                 <div className='container'>
                     {
-                        dishes? 
-                        dishes.map((el, i) => (
-                            <div key={i} className='block'>
-                                <h1>Блюдо: {el.name}</h1>
-                                <h2>Цена: {el.price}</h2>
-                            </div>
-                        ))
-                        :
-                        ''
+                        dishes ?
+                            dishes.map((el, i) => (
+                                <div key={i} className='block'>
+                                    <img src='https://imgpng.ru/d/steak_PNG15.png' alt='' />
+                                    <h1 className='name'>{el.name}</h1>
+                                    <h2 className='price'>{el.price} сом</h2>
+                                </div>
+                            ))
+                            :
+                            ''
                     }
                 </div>
             </div>
