@@ -24,6 +24,7 @@ const GuestZal = () => {
                     currentGuests ?
                     currentGuests.map((el, i) => (
                         <div key={i} className='block'>
+                            <img src='https://cdn.nur.kz/images/1120x630/f1e68f3197fcc46e.jpeg' alt='' />
                             <h1>{el.name}</h1>
                             <h2>Всего мест: {el.seating}</h2>
                             <h3>Забронированно: {el.resurves.map(num => num.seat_number).reduce((a, b) => a+b)}</h3>

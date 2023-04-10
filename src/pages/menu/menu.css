@@ -19,5 +19,6 @@
     color: #fff;
 }
 .menu .block img {
-    width: inherit;
+    min-width: 190px;
+    width: 13vw;
 }
