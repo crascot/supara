@@ -6,15 +6,63 @@ import { setPhilial } from '../../set-philial';
 import './guest_zal.css';
 
 const GuestZal = () => {
-    const [guests, setGuests] = useState([])
-    let currentGuests = [];
+    // const [guests, setGuests] = useState([])
+    // let currentGuests = [];
 
-    useEffect(() => {
-        axios.get(`${HOST}${guest_zalPoint}`)
-        .then(res => setGuests(res.data))
-      }, [])
+    // useEffect(() => {
+    //     axios.get(`${HOST}${guest_zalPoint}`)
+    //     .then(res => setGuests(res.data))
+    //   }, [])
 
-      guests? currentGuests = guests.filter(el => el.philial === setPhilial) : currentGuests = null
+    //   guests? currentGuests = guests.filter(el => el.philial === setPhilial) : currentGuests = null
+
+    const currentGuests = [
+        {
+            name: 'Юрта',
+            seating: '50',
+            resurves: [
+                {
+                    seat_number: 10
+                },
+                {
+                    seat_number: 10
+                },
+                {
+                    seat_number: 10
+                }
+            ]
+        },
+        {
+            name: 'Юрта',
+            seating: '50',
+            resurves: [
+                {
+                    seat_number: 10
+                },
+                {
+                    seat_number: 10
+                },
+                {
+                    seat_number: 10
+                }
+            ]
+        },
+        {
+            name: 'Юрта',
+            seating: '50',
+            resurves: [
+                {
+                    seat_number: 10
+                },
+                {
+                    seat_number: 10
+                },
+                {
+                    seat_number: 10
+                }
+            ]
+        }
+    ]
 
     return (
         <div>

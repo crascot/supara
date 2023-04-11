@@ -6,17 +6,36 @@ import { setPhilial } from '../../set-philial';
 import './menu.css';
 
 const Menu = () => {
-    const [menu, setMenu] = useState([])
-    let currentMenu = [];
-    let dishes = [];
+    // const [menu, setMenu] = useState([])
+    // let currentMenu = [];
+    // let dishes = [];
 
-    useEffect(() => {
-        axios.get(`${HOST}${menuPoint}`)
-        .then(res => setMenu(res.data))
-      }, [])
+    // useEffect(() => {
+    //     axios.get(`${HOST}${menuPoint}`)
+    //     .then(res => setMenu(res.data))
+    //   }, [])
 
-      menu? currentMenu = menu.find(el => el.philial === setPhilial) : currentMenu = null
-      menu && currentMenu? dishes = currentMenu.dishes : dishes = null
+    //   menu? currentMenu = menu.find(el => el.philial === setPhilial) : currentMenu = null
+    //   menu && currentMenu? dishes = currentMenu.dishes : dishes = null
+
+    const dishes = [
+        {
+            name: 'Стейк',
+            price: '500'
+        },
+        {
+            name: 'Стейк',
+            price: '500'
+        },
+        {
+            name: 'Стейк',
+            price: '500'
+        },
+    ]
+    const currentMenu = {
+        name: 'Меню',
+        description: 'Лучшие народные блюда Кыргызстана'
+    }
 
     return (
         <div>
