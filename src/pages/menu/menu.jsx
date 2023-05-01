@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Nav from '../../components/nav/nav';
+import Footer from '../../components/footer/footer';
 import { HOST, menuPoint } from '../../end-points';
 import { setPhilial } from '../../set-philial';
 import './menu.css';
@@ -41,6 +42,7 @@ const Menu = () => {
                     }
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

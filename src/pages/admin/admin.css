@@ -1,0 +1,6 @@
+.block {
+        max-width: 100% !important;
+        width: 100%;
+        border: 1px solid #fff;
+        text-align: left !important;
+}

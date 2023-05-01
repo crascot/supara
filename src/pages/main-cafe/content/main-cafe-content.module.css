@@ -1,0 +1,140 @@
+.mainCafe {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: #e57131;
+}
+
+.mainCafe a {
+    text-decoration: none;
+}
+.mainCafe a:hover {
+    text-decoration: underline !important;
+}
+
+.mainCafe .name {
+    text-align: center;
+    overflow: hidden;
+}
+
+.header {
+    width: inherit;
+    background-image: url('../../../assets/main-cafe/forest.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.header img {
+    margin-top: -4px;
+    width: inherit;
+}
+
+.info {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: inherit;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.info h1 {
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    color: #ea7428;
+}
+.info p {
+    max-width: 372px;
+    color: #fff;
+}
+.info a {
+    width: inherit;
+    color: #e4b26c;
+}
+
+.zals {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: inherit;
+    width: 100%;
+}
+.zalsHeader {
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+.zalsHeader h1 {
+    margin-left: 0 !important;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+.zals h1 * {
+    color: #ea7428 !important;
+}
+.zals a {
+    color: #fff;
+}
+
+.zalsContent {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.zalsContentBlock {
+    width: 271px;
+    margin-bottom: 30px;
+}
+.zalsContentBlock img {
+    width: 271px;
+    margin-bottom: 30px;
+}
+.zalsContentBlock a {
+    font-size: 1.5em;
+    color: #ea7428 !important;
+}
+
+@media (max-width: 1240px) {
+    .info, .zals, .zalsContent {
+        max-width: 951px;
+    }
+    .info, .zalsContent {
+        justify-content: space-between;
+    }
+    .block {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        width: 270px;
+    }
+    .info img {
+        width: inherit;
+    }
+    .zalsContentBlock {
+        width: 220px;
+    }
+    .zalsContentBlock a, .zalsContentBlock a img {
+        width: inherit;
+    }
+}
+
+@media (max-width: 960px) {
+    .info, .zals, .zalsContent {
+        max-width: 765px;
+    }
+    .block {
+        width: 220px;
+    }
+    .zalsContentBlock {
+        width: 170px;
+    }
+    .zalsContentBlock a {
+        font-size: 1.1em;
+    }
+}
