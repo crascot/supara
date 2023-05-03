@@ -38,12 +38,13 @@ const Footer = () => {
                     <br />
                     +996 (553) 787272
                 </div>
-                <div className={s.certificate}><img src={certificate} alt='' /></div>
+                <div className={`${s.block} ${s.certificate}`}><img src={certificate} alt='' /></div>
             </div>
-            <hr />
-            <div className={`${s.content} ${s.bottomFooter}`}>
-                <p>© 2023 Supara Chunkurchak. All Rights Reserved. Сайт разработан Vision Studio</p>
-                <img src={top} className={s.top} onClick={scrollTop} alt="" />
+            <div className={s.bottomContent}>
+                <div className={`${s.content} ${s.bottomFooter}`}>
+                    <p>© 2023 Supara Chunkurchak. All Rights Reserved. Сайт разработан Vision Studio</p>
+                    <img src={top} className={s.top} onClick={scrollTop} alt="" />
+                </div>
             </div>
         </div>
     )
