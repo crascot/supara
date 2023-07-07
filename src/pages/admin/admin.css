@@ -4,3 +4,8 @@
         border: 1px solid #fff;
         text-align: left !important;
 }
+.title {
+        width: 100%;
+        text-align: center;
+        color: #e57131;
+}

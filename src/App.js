@@ -7,6 +7,7 @@ import GuestZal from './pages/guest_zal/guest_zal.jsx';
 import Menu from './pages/menu/menu.jsx';
 import MainCafe from './pages/main-cafe/main-cafe.jsx';
 import Admin from './pages/admin/admin.jsx';
+import Pay from './pages/pay/pay.jsx';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Route path='/supara/guest_zal' element={<GuestZal />} />
         <Route path='/supara/menu' element={<Menu />} />
         <Route path='/supara/form' element={<Form />} />
-        <Route path='/supara/admin' element={<Admin />} />
+        <Route path='/admin' element={<Admin />} />
+        <Route path='/supara/pay' element={<Pay />} />
       </Routes>
     </div>
   );

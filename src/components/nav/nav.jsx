@@ -20,6 +20,10 @@ const Nav = ({ current }) => {
             text: 'Места',
         },
         {
+            type: 'pay',
+            text: 'Заказать'
+        },
+        {
             type: 'form',
             text: 'Войти',
         },

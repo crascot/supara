@@ -27,7 +27,7 @@ const GuestZal = () => {
                             <div key={i} className='block'>
                                 <img src={el.photo} alt='' />
                                 <h1>{el.name}</h1>
-                                <h2>Всего мест: {el.seating}</h2>
+                                <h3>Всего мест: {el.seating}</h3>
                                 <h3>Забронированно:
                                     {
                                         el.resurves > 0 ?

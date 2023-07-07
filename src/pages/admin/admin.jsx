@@ -1,25 +1,25 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { guest_zalPoint, HOST } from '../../end-points';
+import { HOST, payment_histrotyPoint } from '../../end-points';
 import './admin.css';
 
 const Admin = () => {
-    const [guests, setGuests] = useState([])
+    const [history, setHistory] = useState([])
 
     useEffect(() => {
-        axios.get(`${HOST}${guest_zalPoint}`)
-            .then(res => setGuests(res.data))
+        axios.get(`${HOST}${payment_histrotyPoint}`)
+            .then(res => setHistory(res.data))
     }, [])
 
     return (
         <div className='container'>
+            <h1 className='title'>История заказов</h1>
             {
-                guests.map((el, i) => (
+                history.map((el, i) => (
                     <div key={i} className='block'>
-                        <h1>Место: {el.name}</h1>
-                        <h3>Всего мест: {el.seating}</h3>
-                        <h3>Зарезервировано: {el.reserved_places}</h3>
-                        <p>Количество зарезервированных мест: {el.resurves.map(num => num.seat_number).reduce((a, b) => a + b)}</p>
+                        <h1>Заказчик: {el.user_id}</h1>
+                        <h1>Количество: {el.amount}</h1>
+                        <h1>Статус: {el.status}</h1>
                     </div>
                 ))
             }

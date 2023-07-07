@@ -6,3 +6,5 @@ export const guest_zalPoint = 'guest_zal/';
 export const menuPoint = 'menu/';
 export const philialPoint = 'philial/';
 export const resurvePoint = 'resurve/';
+export const payPoint = 'pay/';
+export const payment_histrotyPoint = 'payment_history/';
