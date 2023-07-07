@@ -24,8 +24,12 @@ const Form = () => {
                 console.log(res)
                 setEmail('')
                 setPassword('')
+
+                window.location.assign('/');
             })
-            .catch(err => console.log(err))
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     return (
@@ -50,7 +54,7 @@ const Form = () => {
                             onChange={(e) => setPassword(e.target.value)}
                         />
                         <button onClick={() => getIn(loginPoint)}>Войти</button>
-                        <p onClick={() => setIsLogin('register')}>Зарегистрироваться</p>
+                        <p onClick={() => setIsLogin(registrationPoint)}>Зарегистрироваться</p>
                     </div>
                     :
                     <div className='form'>
@@ -71,7 +75,7 @@ const Form = () => {
                             onChange={(e) => setPassword(e.target.value)}
                         />
                         <button onClick={() => getIn(registrationPoint)}>Зарегистрироваться</button>
-                        <p onClick={() => setIsLogin('login')}>Войти</p>
+                        <p onClick={() => setIsLogin(loginPoint)}>Войти</p>
                     </div>
             }
 
