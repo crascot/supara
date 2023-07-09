@@ -5,10 +5,14 @@ import Nav from '../../components/nav/nav';
 import './form.css';
 
 const Form = () => {
-    const [isLogin, setIsLogin] = useState('login')
+    const [isLogin, setIsLogin] = useState(loginPoint)
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    useEffect(() => {
+        console.log(isLogin);
+    }, [isLogin])
 
     useEffect(() => {
         setEmail('')
@@ -25,7 +29,8 @@ const Form = () => {
                 setEmail('')
                 setPassword('')
 
-                window.location.assign('/');
+                alert('Вы успешно зарегистрировались')
+                // window.location.assign('/');
             })
             .catch(err => {
                 console.log(err);
@@ -36,7 +41,7 @@ const Form = () => {
         <div className='form-container'>
             <Nav current='form' />
             {
-                isLogin === 'login' ?
+                isLogin === loginPoint ?
                     <div className='form'>
                         <h1>Войти</h1>
                         <input
