@@ -1,13 +1,10 @@
-version: '3'
+version: '4'
 services:
-  react-app:
+  frontend:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8090:8090
+      - '8090:8090'
     volumes:
-      - .:/app
-    environment:
-      - NODE_ENV=production
-    command: npm start
+      - '.:/app'
