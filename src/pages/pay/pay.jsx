@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Nav from "../../components/nav/nav";
 import { HOST, payPoint } from "../../end-points";
 // import s from './pay.module.css';
@@ -16,11 +16,6 @@ const Pay = () => {
             .then(res => console.log(res))
             .catch(err => console.log(err))
     }
-
-    useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/qrcode/a0b2e5c1-54bb-4361-a22c-37448dd7fe12/')
-        .then(res => console.log(res))
-    }, [])
 
     return (
         <div>
